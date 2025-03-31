@@ -1,8 +1,5 @@
 # PyCG - Practical Python Call Graphs
 
-[![Linters](https://github.com/spyrospav/pycg/actions/workflows/linters.yml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/linters.yml)
-[![Tests](https://github.com/spyrospav/pycg/actions/workflows/test.yaml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/test.yaml)
-
 PyCG generates call graphs for Python code using static analysis.
 It efficiently supports
 * Higher order functions
@@ -155,3 +152,4 @@ We state the changes compare to the original [repo](https://github.com/vitsalis/
 * Removed `black` as a linter and use `ruff` instead in `pyproject.toml`.
 * Published the module under the name `pycg-fork` in PyPI.
 * Renamed all *pycg* prefixes in the source code to *pycgl* (along with the source directory name).
+* Removed workflow icons from `README.md`.
