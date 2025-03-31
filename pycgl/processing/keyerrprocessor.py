@@ -22,8 +22,8 @@ import ast
 import os
 import re
 
-from pycg import utils
-from pycg.processing.base import ProcessingBase
+from pycgl import utils
+from pycgl.processing.base import ProcessingBase
 
 
 class KeyErrProcessor(ProcessingBase):

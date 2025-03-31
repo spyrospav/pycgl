@@ -25,7 +25,7 @@ import sys
 from os.path import abspath, dirname
 from unittest import TestCase, main
 
-from pycg import utils
+from pycgl import utils
 
 SCRIPT_DIR = dirname(abspath(__file__))
 

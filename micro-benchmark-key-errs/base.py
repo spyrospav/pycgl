@@ -18,26 +18,29 @@
 # specific language governing permissions and limitations
 # under the License.
 #
-import os
-import sys
 import importlib
 import json
-
+import os
+import sys
 from unittest import TestCase, main
-from pycg import utils
+
+from pycgl import utils
+
 
 class TestBase(TestCase):
     snippet_dir = ""
 
     def setUp(self):
         def error():
-            print ("Invalid module %s.%s" % (cg_mod, cg_class))
-            print ("Set environment variables `CALL_GRAPH_CLASS` and `CALL_GRAPH_MODULE` properly")
+            print("Invalid module %s.%s" % (cg_mod, cg_class))
+            print(
+                "Set environment variables `CALL_GRAPH_CLASS` and `CALL_GRAPH_MODULE` properly"
+            )
             sys.exit(1)
 
         self.snippets_path = os.environ.get("SNIPPETS_PATH")
-        cg_class = os.environ.get('CALL_GRAPH_CLASS', None)
-        cg_mod = os.environ.get('CALL_GRAPH_MODULE', None)
+        cg_class = os.environ.get("CALL_GRAPH_CLASS", None)
+        cg_mod = os.environ.get("CALL_GRAPH_MODULE", None)
         if not cg_class or not cg_mod:
             error()
         try:
@@ -61,7 +64,9 @@ class TestBase(TestCase):
     def get_snippet_output_cg(self, snippet_path):
         main_path = os.path.join(snippet_path, "main.py")
         try:
-            cg = self.cg_class([main_path], snippet_path, -1, utils.constants.KEY_ERR_OP)
+            cg = self.cg_class(
+                [main_path], snippet_path, -1, utils.constants.KEY_ERR_OP
+            )
             cg.analyze()
             return cg.output_key_errs()
         except Exception as e:

@@ -20,7 +20,7 @@
 #
 import symtable
 
-from pycg import utils
+from pycgl import utils
 
 
 class ScopeManager(object):

@@ -18,8 +18,8 @@
 # specific language governing permissions and limitations
 # under the License.
 #
-from pycg import utils
-from pycg.machinery.pointers import LiteralPointer, NamePointer
+from pycgl import utils
+from pycgl.machinery.pointers import LiteralPointer, NamePointer
 
 
 class DefinitionManager(object):

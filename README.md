@@ -1,7 +1,7 @@
 # PyCG - Practical Python Call Graphs
 
-[![Linters](https://github.com/vitsalis/PyCG/actions/workflows/linters.yml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/linters.yml)
-[![Tests](https://github.com/vitsalis/PyCG/actions/workflows/test.yaml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/test.yaml)
+[![Linters](https://github.com/spyrospav/pycg/actions/workflows/linters.yml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/linters.yml)
+[![Tests](https://github.com/spyrospav/pycg/actions/workflows/test.yaml/badge.svg)](https://github.com/vitsalis/PyCG/actions/workflows/test.yaml)
 
 PyCG generates call graphs for Python code using static analysis.
 It efficiently supports
@@ -145,3 +145,13 @@ pip3 install mock
 ```
 make test
 ```
+
+# Changes
+
+We state the changes compare to the original [repo](https://github.com/vitsalis/PyCG) as per the Apache-2.0 license:
+
+* Changed capitalization of _PyCG_ to _pycg_ to match Linux directories compatibility.
+* Added author name to the `pyproject.toml` file.
+* Removed `black` as a linter and use `ruff` instead in `pyproject.toml`.
+* Published the module under the name `pycg-l` in PyPI.
+* Renamed all *pycg* prefixes in the source code to *pycgl* (along with the source directory name).

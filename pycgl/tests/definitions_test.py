@@ -20,8 +20,8 @@
 #
 from base import TestBase
 
-from pycg import utils
-from pycg.machinery.definitions import DefinitionError, DefinitionManager
+from pycgl import utils
+from pycgl.machinery.definitions import DefinitionError, DefinitionManager
 
 
 class DefinitionManagerTest(TestBase):

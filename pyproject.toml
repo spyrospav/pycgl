@@ -1,13 +1,19 @@
+[tool.hatch.build.targets.wheel]
+packages = ["pycgl"]
+
 [project]
-name = "PyCG"
+name = "pycgl"
 version = "0.0.8"
 
-description = "PyCG - Practical Python Call Graphs"
+description = "pycgl - Practical Python Call Graphs"
 readme = "README.md"
 requires-python = ">=3.4"
 
-licence = {file = "LICENCE"}
-authors = [{name = "Vitalis Salis", email = "vitsalis@gmail.com"}]
+license = {file = "LICENCE"}
+authors = [
+    {name = "Vitalis Salis", email = "vitsalis@gmail.com"},
+    {name = "Spyros Pavlatos", email = "pavlatos@seas.upenn.edu"}   
+]
 
 
 classifiers = [
@@ -19,29 +25,13 @@ classifiers = [
 dev = ["flake8>=6.0.0", "isort>=5.12.0", "black>=22.12.0", "mock"]
 
 [project.urls]
-"Homepage" = "https://github.com/vitsalis/PyCG"
-"Bug Tracker" = "https://github.com/vitsalis/PyCG/issues"
+"Homepage" = "https://github.com/pavlatos/pycgl"
+"Bug Tracker" = "https://github.com/pavlatos/pycgl/issues"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.black]
-line-length = 88
-target_version = ['py38', 'py39', 'py310']
-preview = true
-exclude = '''
-/(
-    \.eggs         # exclude a few common directories in the
-  | \.git          # root of the project
-  | \.mypy_cache
-  | \.vscode
-  | build
-  | dist
-  | micro-benchmark
-  | micro-benchmark-key-errs
-)/
-'''
 
 [tool.ruff]
 # Do not enforce `E501` (line length violations) for now.
@@ -57,5 +47,15 @@ exclude = [
 "__init__.py" = ["E402", "F401"]
 
 
-[tool.isort]
-profile = "black"
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # flake8-bugbear
+    "B",
+    # isort
+    "I",
+]
+

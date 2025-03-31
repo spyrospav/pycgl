@@ -24,7 +24,7 @@ import os
 import sys
 from importlib import abc
 
-from pycg import utils
+from pycgl import utils
 
 
 def get_custom_loader(ig_obj):

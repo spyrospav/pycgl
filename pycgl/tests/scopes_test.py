@@ -23,7 +23,7 @@ import symtable
 from base import TestBase
 from mock import patch
 
-from pycg.machinery.scopes import ScopeError, ScopeItem, ScopeManager
+from pycgl.machinery.scopes import ScopeError, ScopeItem, ScopeManager
 
 
 class ScopeManagerTest(TestBase):
@@ -62,12 +62,14 @@ class ScopeManagerTest(TestBase):
 
         self.assertEqual(
             sorted(items["functions"]),
-            sorted([
-                "root.chld1",
-                "root.chld1.grndchld2",
-                "root.chld2",
-                "root.chld3.grndchld4",
-            ]),
+            sorted(
+                [
+                    "root.chld1",
+                    "root.chld1.grndchld2",
+                    "root.chld2",
+                    "root.chld3.grndchld4",
+                ]
+            ),
         )
         self.assertEqual(sorted(items["classes"]), sorted(["root.chld3"]))
 

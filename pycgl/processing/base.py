@@ -21,8 +21,8 @@
 import ast
 import os
 
-from pycg import utils
-from pycg.machinery.definitions import Definition
+from pycgl import utils
+from pycgl.machinery.definitions import Definition
 
 
 class ProcessingBase(ast.NodeVisitor):

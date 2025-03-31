@@ -21,9 +21,9 @@
 import ast
 import os
 
-from pycg import utils
-from pycg.machinery.definitions import Definition
-from pycg.processing.base import ProcessingBase
+from pycgl import utils
+from pycgl.machinery.definitions import Definition
+from pycgl.processing.base import ProcessingBase
 
 
 class CallGraphProcessor(ProcessingBase):

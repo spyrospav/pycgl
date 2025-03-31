@@ -20,7 +20,7 @@
 #
 from base import TestBase
 
-from pycg.machinery.callgraph import CallGraph, CallGraphError
+from pycgl.machinery.callgraph import CallGraph, CallGraphError
 
 
 class CallGraphTest(TestBase):

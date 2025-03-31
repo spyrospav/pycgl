@@ -20,8 +20,8 @@
 #
 from base import TestBase
 
-from pycg import utils
-from pycg.formats.fasten import Fasten
+from pycgl import utils
+from pycgl.formats.fasten import Fasten
 
 
 class FastenFormatTest(TestBase):

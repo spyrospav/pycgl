@@ -25,7 +25,7 @@ import sys
 import mock
 from base import TestBase
 
-from pycg.machinery.imports import ImportManager, ImportManagerError, get_custom_loader
+from pycgl.machinery.imports import ImportManager, ImportManagerError, get_custom_loader
 
 
 class ImportsTest(TestBase):

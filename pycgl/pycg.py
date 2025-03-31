@@ -20,18 +20,18 @@
 #
 import os
 
-from pycg import utils
-from pycg.machinery.callgraph import CallGraph
-from pycg.machinery.classes import ClassManager
-from pycg.machinery.definitions import DefinitionManager
-from pycg.machinery.imports import ImportManager
-from pycg.machinery.key_err import KeyErrors
-from pycg.machinery.modules import ModuleManager
-from pycg.machinery.scopes import ScopeManager
-from pycg.processing.cgprocessor import CallGraphProcessor
-from pycg.processing.keyerrprocessor import KeyErrProcessor
-from pycg.processing.postprocessor import PostProcessor
-from pycg.processing.preprocessor import PreProcessor
+from pycgl import utils
+from pycgl.machinery.callgraph import CallGraph
+from pycgl.machinery.classes import ClassManager
+from pycgl.machinery.definitions import DefinitionManager
+from pycgl.machinery.imports import ImportManager
+from pycgl.machinery.key_err import KeyErrors
+from pycgl.machinery.modules import ModuleManager
+from pycgl.machinery.scopes import ScopeManager
+from pycgl.processing.cgprocessor import CallGraphProcessor
+from pycgl.processing.keyerrprocessor import KeyErrProcessor
+from pycgl.processing.postprocessor import PostProcessor
+from pycgl.processing.preprocessor import PreProcessor
 
 
 class CallGraphGenerator(object):
@@ -63,9 +63,9 @@ class CallGraphGenerator(object):
 
         state["scopes"] = {}
         for key, scope in self.scope_manager.get_scopes().items():
-            state["scopes"][key] = set([
-                x.get_ns() for (_, x) in scope.get_defs().items()
-            ])
+            state["scopes"][key] = set(
+                [x.get_ns() for (_, x) in scope.get_defs().items()]
+            )
 
         state["classes"] = {}
         for key, ch in self.class_manager.get_classes().items():
