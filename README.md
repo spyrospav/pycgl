@@ -153,5 +153,5 @@ We state the changes compare to the original [repo](https://github.com/vitsalis/
 * Changed capitalization of _PyCG_ to _pycg_ to match Linux directories compatibility.
 * Added author name to the `pyproject.toml` file.
 * Removed `black` as a linter and use `ruff` instead in `pyproject.toml`.
-* Published the module under the name `pycg-l` in PyPI.
+* Published the module under the name `pycg-fork` in PyPI.
 * Renamed all *pycg* prefixes in the source code to *pycgl* (along with the source directory name).

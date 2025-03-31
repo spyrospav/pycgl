@@ -2,7 +2,7 @@
 packages = ["pycgl"]
 
 [project]
-name = "pycgl"
+name = "pycg-fork"
 version = "0.0.8"
 
 description = "pycgl - Practical Python Call Graphs"
